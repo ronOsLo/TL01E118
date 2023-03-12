@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="combo_Pais">
+       <item>Honduras (504)</item>
+        <item>Guatemala (502)</item>
+        <item>Costa Rica (506)</item>
+        <item>Nicaragua (505)</item>
+        <item>Panama (507)</item>
+    </string-array>
+
+</resources>

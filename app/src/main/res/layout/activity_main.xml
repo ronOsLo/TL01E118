@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtTitulo"
+        android:id="@+id/lblTitulo"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="40dp"
@@ -18,23 +18,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btbIngresar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/lblTitulo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnListar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Listar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btbIngresar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
