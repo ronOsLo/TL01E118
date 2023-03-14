@@ -87,6 +87,7 @@ public class ActivityIngresar extends AppCompatActivity {
 
             long resultado = db.insert(transacciones.tablaagenda, transacciones.id, valores);
 
+
             Toast.makeText(this, "INGRESADO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
             limpiarPantalla();
         }catch (Exception er)

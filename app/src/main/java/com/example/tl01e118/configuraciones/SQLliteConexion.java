@@ -8,6 +8,8 @@ import androidx.annotation.Nullable;
 
 public class SQLliteConexion extends SQLiteOpenHelper
 {
+
+
 public SQLliteConexion(@Nullable Context context,
                        @Nullable String name,
                        @Nullable SQLiteDatabase.CursorFactory factory,
@@ -29,4 +31,5 @@ public SQLliteConexion(@Nullable Context context,
 //eliminar tablas
         sqLiteDatabase.execSQL(transacciones.DropTBagenda);
     }
+
 }
