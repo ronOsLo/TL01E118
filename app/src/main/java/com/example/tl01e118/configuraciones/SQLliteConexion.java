@@ -9,27 +9,23 @@ import androidx.annotation.Nullable;
 public class SQLliteConexion extends SQLiteOpenHelper
 {
 
-
-public SQLliteConexion(@Nullable Context context,
-                       @Nullable String name,
-                       @Nullable SQLiteDatabase.CursorFactory factory,
-                       int version){
-    super(context, name, factory, version);
-
-}
-
-    @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase)
-    {
-     //creacion de objetos de db
-     sqLiteDatabase.execSQL(transacciones.CreateTBagenda);
+    public SQLliteConexion(@Nullable Context context,
+                           @Nullable String name,
+                           @Nullable SQLiteDatabase.CursorFactory factory,
+                           int version){
+        super(context, name, factory, version);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1)
-    {
-//eliminar tablas
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        //creacion de objetos de db
+        sqLiteDatabase.execSQL(transacciones.CreateTBagenda);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        //eliminar tablas
         sqLiteDatabase.execSQL(transacciones.DropTBagenda);
     }
-
 }
+
