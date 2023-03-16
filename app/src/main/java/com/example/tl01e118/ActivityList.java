@@ -77,7 +77,7 @@ SearchView buscar;
 
     }
 
-    private void obtenerListaContactos()
+    public void obtenerListaContactos()
     {
         SQLiteDatabase db =conexion.getReadableDatabase();
         contactos contac =null;
@@ -129,4 +129,5 @@ SearchView buscar;
     public boolean onQueryTextChange(String s) {
         return false;
     }
+
 }

@@ -67,7 +67,30 @@ public class ActivityContacto extends AppCompatActivity {
         txtNombre.setText(nombre.toString());
         txtNumero.setText(numero.toString());
         txtNota.setText(nota);
-        spPais.setSelection(1);
+
+        String honduras = "Honduras (504)";
+        String guatemala = "Guatemala (502)";
+        String costarica = "Costa Rica (506)";
+        String nicaragua = "Nicaragua (505)";
+        String panama = "Panama (507)";
+
+        if(honduras.equals(pais)) {
+            spPais.setSelection(0);
+            Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
+        }
+        if(guatemala.equals(pais)) {
+            spPais.setSelection(1);
+            Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
+        }
+        if(costarica.equals(pais)) {
+            spPais.setSelection(2);
+        }
+        if(nicaragua.equals(pais)) {
+            spPais.setSelection(3);
+        }
+        if(panama.equals(pais)) {
+            spPais.setSelection(4);
+        }
 
         Editar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +116,7 @@ public class ActivityContacto extends AppCompatActivity {
                 EdNombre=txtNombre.getText().toString();
                 EdNumero=txtNumero.getText().toString();
                 EdNota=txtNota.getText().toString();
+                EdPais=spPais.getSelectedItem().toString();
                 AlertDialog.Builder builder = new AlertDialog.Builder(ActivityContacto.this);
                 builder.setMessage("Desea Actualizar este contacto?")
                         .setPositiveButton("SI", new DialogInterface.OnClickListener() {
@@ -100,7 +124,7 @@ public class ActivityContacto extends AppCompatActivity {
                             public void onClick(DialogInterface dialogInterface, int i)
                             {
                                 transacciones tran = new transacciones(ActivityContacto.this,transacciones.NameDatabase,null,1);
-                                if( tran.editarContacto(id,EdNombre,EdNumero,EdNota)){
+                                if( tran.editarContacto(id,EdNombre,EdNumero,EdNota,EdPais)){
                                     lista();
                                 };
                             }

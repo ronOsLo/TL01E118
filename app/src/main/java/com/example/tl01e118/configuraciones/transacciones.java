@@ -37,7 +37,7 @@ public class transacciones extends SQLliteConexion
         this.context=context;
     }
 
-    public boolean editarContacto(int Id, String Nombre, String Numero, String Nota){
+    public boolean editarContacto(int Id, String Nombre, String Numero, String Nota, String Pais){
         boolean correcto = false;
 
         SQLliteConexion sqLliteConexion = new SQLliteConexion(context,
@@ -46,7 +46,7 @@ public class transacciones extends SQLliteConexion
                 1);
         SQLiteDatabase db = sqLliteConexion.getWritableDatabase();
         try {
-            db.execSQL("UPDATE " + tablaagenda + " SET nombre = '" + Nombre + "', numero = '" + Numero + "', nota = '" + Nota + "' WHERE id='" + Id + "' ");
+            db.execSQL("UPDATE " + tablaagenda + " SET nombre = '" + Nombre + "', numero = '" + Numero +"', nota = '" + Nota + "', pais = '" + Pais + "' WHERE id='" + Id + "' ");
             correcto=true;
         }catch (Exception er){
             er.toString();
