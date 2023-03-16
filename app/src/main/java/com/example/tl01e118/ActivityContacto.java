@@ -76,11 +76,9 @@ public class ActivityContacto extends AppCompatActivity {
 
         if(honduras.equals(pais)) {
             spPais.setSelection(0);
-            Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
         }
         if(guatemala.equals(pais)) {
             spPais.setSelection(1);
-            Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
         }
         if(costarica.equals(pais)) {
             spPais.setSelection(2);
